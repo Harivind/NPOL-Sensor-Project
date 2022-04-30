@@ -44,6 +44,10 @@
 #include "mcc_generated_files/mcc.h"
 
 #define LED LATCbits.LATC5
+
+char device_ID;
+
+void Configure_Device_Id();
 /*
                          Main application
  */
@@ -51,7 +55,10 @@ int main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
-
+    
+    ADC_Initialize();
+    
+    Configure_Device_Id();
     // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
     // Use the following macros to:
 
@@ -70,9 +77,18 @@ int main(void)
     while (1) {
         __delay_ms(3000);
        // toggle the LED pin 
-       LED ^= 1;             
+       LED ^= 1;           
     }
     return 1;
+}
+
+void Configure_Device_Id(){
+//    unsigned short A2 = (PORTAbits.RA2 + 0.5);
+//    unsigned short C0 = (PORTCbits.RC0 + 0.5);
+    unsigned short C1 = (ID_3_GetValue() + 0.5);
+    unsigned short C2 = (ID_4_GetValue() + 0.5);
+    
+    device_ID = (C1<<3 | C2);
 }
 /**
  End of File

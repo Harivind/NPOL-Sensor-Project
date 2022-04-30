@@ -317,8 +317,8 @@ text6 77A 78B CODE 77A 0
 text3 76A 779 CODE 76A 0
 text2 762 769 CODE 762 0
 %locals
-dist/default/production\Sensor.X.production.o
-C:\Users\hariv\AppData\Local\Temp\xcAsrcc.s
+dist/default/debug\Sensor.X.debug.o
+C:\Users\hariv\AppData\Local\Temp\xcAsp5o.s
 2809 7FB 0 CODE 0
 2812 7FB 0 CODE 0
 2824 7FB 0 CODE 0

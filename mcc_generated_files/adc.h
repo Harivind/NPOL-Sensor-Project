@@ -94,11 +94,11 @@ typedef struct
 
 typedef enum
 {
-    channel_ANA2 =  0x2,
+    ID_1 =  0x2,
     Pressure_Sensor =  0x4,
-    channel_ANC0 =  0x10,
-    channel_ANC1 =  0x11,
-    channel_ANC2 =  0x12,
+    ID_2 =  0x10,
+    ID_3 =  0x11,
+    ID_4 =  0x12,
     Temp_Sensor =  0x13,
     channel_AVSS =  0x3C,
     channel_Temp =  0x3D,

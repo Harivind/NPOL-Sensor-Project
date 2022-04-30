@@ -3,11 +3,11 @@ Microchip MPLAB XC8 Compiler V2.36
 Linker command line:
 
 -W-3 --edf=D:\Softwares\Microchip\xc8\v2.36\pic\dat\en_msgs.txt -cn \
-  -h+dist/default/production\Sensor.X.production.sym \
-  --cmf=dist/default/production\Sensor.X.production.cmf -z -Q16F18323 \
-  -oC:\Users\hariv\AppData\Local\Temp\xcAsrcc.4 --defsym=__MPLAB_BUILD=1 \
-  -Mdist/default/production/Sensor.X.production.map \
-  --md=C:\Users\hariv\AppData\Local\Temp\xcAsrcc.dat -E1 -ver=XC8 Compiler \
+  -h+dist/default/debug\Sensor.X.debug.sym \
+  --cmf=dist/default/debug\Sensor.X.debug.cmf -z -Q16F18323 \
+  -oC:\Users\hariv\AppData\Local\Temp\xcAsp5o.4 --defsym=__MPLAB_BUILD=1 \
+  -Mdist/default/debug/Sensor.X.debug.map \
+  --md=C:\Users\hariv\AppData\Local\Temp\xcAsp5o.dat -E1 -ver=XC8 Compiler \
   --acfsm=1493 -ACODE=00h-07FFh -ASTRCODE=00h-07FFh -ASTRING=00h-0FFhx8 \
   -ACONST=00h-0FFhx8 -AENTRY=00h-0FFhx8 -ACOMMON=070h-07Fh \
   -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh -ABANK2=0120h-016Fh \
@@ -27,8 +27,8 @@ Linker command line:
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pcinit=CODE \
-  -pfunctab=ENTRY -k C:\Users\hariv\AppData\Local\Temp\xcAsrcc.o \
-  dist/default/production\Sensor.X.production.o 
+  -pfunctab=ENTRY -k C:\Users\hariv\AppData\Local\Temp\xcAsp5o.o \
+  dist/default/debug\Sensor.X.debug.o 
 
 Object code version is 3.11
 
@@ -37,12 +37,12 @@ Machine type is 16F18323
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\hariv\AppData\Local\Temp\xcAsrcc.o
+C:\Users\hariv\AppData\Local\Temp\xcAsp5o.o
                 end_init                              1        1        1        0       0
                 reset_vec                             0        0        1        0       0
                 config                             8007     8007        4        0       4
                 idloc                              8000     8000        4        0       5
-dist/default/production\Sensor.X.production.o
+dist/default/debug\Sensor.X.debug.o
                 cinit                               7FB      7FB        5      FF6       0
                 config                             8007     8007        4        0       4
                 idloc                              8000     8000        4        0       5

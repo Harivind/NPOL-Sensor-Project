@@ -82,13 +82,13 @@ int main(void)
     return 1;
 }
 
-void Configure_Device_Id(){
+void Configure_Device_Id(){ 
 //    unsigned short A2 = (PORTAbits.RA2 + 0.5);
-//    unsigned short C0 = (PORTCbits.RC0 + 0.5);
-    unsigned short C1 = (ID_3_GetValue() + 0.5);
-    unsigned short C2 = (ID_4_GetValue() + 0.5);
+    char C0 = ADC_GetConversion(ID_2)/200;
+    char C1 = ADC_GetConversion(ID_3)/200;
+    char C2 = ADC_GetConversion(ID_4)/200;
     
-    device_ID = (C1<<3 | C2);
+    device_ID = ( C0<<6 | C1<<3 | C2);
 }
 /**
  End of File

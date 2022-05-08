@@ -8457,7 +8457,7 @@ int main(void)
 
     SYSTEM_Initialize();
 
-
+    ADC_Initialize();
 
     Configure_Device_Id();
 # 77 "main.c"
@@ -8472,8 +8472,10 @@ int main(void)
 void Configure_Device_Id(){
 
 
-    unsigned short C1 = (PORTCbits.RC1 + 0.5);
-    unsigned short C2 = (PORTCbits.RC2 + 0.5);
+
+
+    unsigned short C1 = ADC_GetConversion(ID_3)/200;
+    unsigned short C2 = ADC_GetConversion(ID_4)/200;
 
     device_ID = (C1<<3 | C2);
 }

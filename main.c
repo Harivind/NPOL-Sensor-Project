@@ -48,6 +48,11 @@
 char device_ID;
 
 void Configure_Device_Id();
+char readTemperatureFromSensor();
+char readPressureFromSensor();
+char calculateTemperatureFromVolatage(uint16_t vol);
+char calculatePressureFromVolatage(uint16_t vol);
+ 
 /*
                          Main application
  */
@@ -67,7 +72,7 @@ int main(void)
 
     // Enable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptEnable();
-
+    
     // Disable the Global Interrupts
     //INTERRUPT_GlobalInterruptDisable();
 
@@ -77,7 +82,9 @@ int main(void)
     while (1) {
         __delay_ms(3000);
        // toggle the LED pin 
-       LED ^= 1;           
+        char temp = readTemperatureFromSensor();
+//        char pressure = readPressureFromSensor();
+//        printf("Hello: %d %d", temp, pressure);
     }
     return 1;
 }
@@ -89,6 +96,26 @@ void Configure_Device_Id(){
     char C2 = ADC_GetConversion(ID_4)/200;
     
     device_ID = ( C0<<6 | C1<<3 | C2);
+}
+
+char readTemperatureFromSensor(){
+    uint16_t voltage = ADC_GetConversion(Temp_Sensor);
+//    return 8;
+    return calculateTemperatureFromVolatage(voltage);
+}
+
+char calculateTemperatureFromVolatage(uint16_t vol){
+//    return -2E-07*vol*vol*vol + 0.0003*vol*vol - 0.2506*vol + 100.58;
+    return -0.0991*vol + 76.782;
+}
+
+char readPressureFromSensor(){
+    uint16_t voltage = ADC_GetConversion(Pressure_Sensor);
+    return calculatePressureFromVolatage(voltage);
+}
+
+char calculatePressureFromVolatage(uint16_t vol){
+    return 1; //TODO
 }
 /**
  End of File

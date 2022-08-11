@@ -116,12 +116,12 @@ uint8_t readPressureFromSensor(){
 }
 
 uint8_t calculatePressureFromVolatage(uint16_t vol){
-    if(vol < 105){
+    if(vol < 115){
         return 0;
     }
-    float sol = 0.0251224 * vol;
+    float sol = 0.0401 * vol;
     sol/=0.2048;
-    sol-=12.5385;
+    sol+=0.5471;
     return sol;
 }
 /**

@@ -205,45 +205,29 @@
 #define Temp_Sensor_SetAnalogMode()      do { ANSELCbits.ANSC3 = 1; } while(0)
 #define Temp_Sensor_SetDigitalMode()     do { ANSELCbits.ANSC3 = 0; } while(0)
 
-// get/set RS485_RX aliases
-#define RS485_RX_TRIS                 TRISCbits.TRISC4
-#define RS485_RX_LAT                  LATCbits.LATC4
-#define RS485_RX_PORT                 PORTCbits.RC4
-#define RS485_RX_WPU                  WPUCbits.WPUC4
-#define RS485_RX_OD                   ODCONCbits.ODCC4
-#define RS485_RX_ANS                  ANSELCbits.ANSC4
-#define RS485_RX_SetHigh()            do { LATCbits.LATC4 = 1; } while(0)
-#define RS485_RX_SetLow()             do { LATCbits.LATC4 = 0; } while(0)
-#define RS485_RX_Toggle()             do { LATCbits.LATC4 = ~LATCbits.LATC4; } while(0)
-#define RS485_RX_GetValue()           PORTCbits.RC4
-#define RS485_RX_SetDigitalInput()    do { TRISCbits.TRISC4 = 1; } while(0)
-#define RS485_RX_SetDigitalOutput()   do { TRISCbits.TRISC4 = 0; } while(0)
-#define RS485_RX_SetPullup()          do { WPUCbits.WPUC4 = 1; } while(0)
-#define RS485_RX_ResetPullup()        do { WPUCbits.WPUC4 = 0; } while(0)
-#define RS485_RX_SetPushPull()        do { ODCONCbits.ODCC4 = 0; } while(0)
-#define RS485_RX_SetOpenDrain()       do { ODCONCbits.ODCC4 = 1; } while(0)
-#define RS485_RX_SetAnalogMode()      do { ANSELCbits.ANSC4 = 1; } while(0)
-#define RS485_RX_SetDigitalMode()     do { ANSELCbits.ANSC4 = 0; } while(0)
+// get/set RC4 procedures
+#define RC4_SetHigh()            do { LATCbits.LATC4 = 1; } while(0)
+#define RC4_SetLow()             do { LATCbits.LATC4 = 0; } while(0)
+#define RC4_Toggle()             do { LATCbits.LATC4 = ~LATCbits.LATC4; } while(0)
+#define RC4_GetValue()              PORTCbits.RC4
+#define RC4_SetDigitalInput()    do { TRISCbits.TRISC4 = 1; } while(0)
+#define RC4_SetDigitalOutput()   do { TRISCbits.TRISC4 = 0; } while(0)
+#define RC4_SetPullup()             do { WPUCbits.WPUC4 = 1; } while(0)
+#define RC4_ResetPullup()           do { WPUCbits.WPUC4 = 0; } while(0)
+#define RC4_SetAnalogMode()         do { ANSELCbits.ANSC4 = 1; } while(0)
+#define RC4_SetDigitalMode()        do { ANSELCbits.ANSC4 = 0; } while(0)
 
-// get/set RS485_TX aliases
-#define RS485_TX_TRIS                 TRISCbits.TRISC5
-#define RS485_TX_LAT                  LATCbits.LATC5
-#define RS485_TX_PORT                 PORTCbits.RC5
-#define RS485_TX_WPU                  WPUCbits.WPUC5
-#define RS485_TX_OD                   ODCONCbits.ODCC5
-#define RS485_TX_ANS                  ANSELCbits.ANSC5
-#define RS485_TX_SetHigh()            do { LATCbits.LATC5 = 1; } while(0)
-#define RS485_TX_SetLow()             do { LATCbits.LATC5 = 0; } while(0)
-#define RS485_TX_Toggle()             do { LATCbits.LATC5 = ~LATCbits.LATC5; } while(0)
-#define RS485_TX_GetValue()           PORTCbits.RC5
-#define RS485_TX_SetDigitalInput()    do { TRISCbits.TRISC5 = 1; } while(0)
-#define RS485_TX_SetDigitalOutput()   do { TRISCbits.TRISC5 = 0; } while(0)
-#define RS485_TX_SetPullup()          do { WPUCbits.WPUC5 = 1; } while(0)
-#define RS485_TX_ResetPullup()        do { WPUCbits.WPUC5 = 0; } while(0)
-#define RS485_TX_SetPushPull()        do { ODCONCbits.ODCC5 = 0; } while(0)
-#define RS485_TX_SetOpenDrain()       do { ODCONCbits.ODCC5 = 1; } while(0)
-#define RS485_TX_SetAnalogMode()      do { ANSELCbits.ANSC5 = 1; } while(0)
-#define RS485_TX_SetDigitalMode()     do { ANSELCbits.ANSC5 = 0; } while(0)
+// get/set RC5 procedures
+#define RC5_SetHigh()            do { LATCbits.LATC5 = 1; } while(0)
+#define RC5_SetLow()             do { LATCbits.LATC5 = 0; } while(0)
+#define RC5_Toggle()             do { LATCbits.LATC5 = ~LATCbits.LATC5; } while(0)
+#define RC5_GetValue()              PORTCbits.RC5
+#define RC5_SetDigitalInput()    do { TRISCbits.TRISC5 = 1; } while(0)
+#define RC5_SetDigitalOutput()   do { TRISCbits.TRISC5 = 0; } while(0)
+#define RC5_SetPullup()             do { WPUCbits.WPUC5 = 1; } while(0)
+#define RC5_ResetPullup()           do { WPUCbits.WPUC5 = 0; } while(0)
+#define RC5_SetAnalogMode()         do { ANSELCbits.ANSC5 = 1; } while(0)
+#define RC5_SetDigitalMode()        do { ANSELCbits.ANSC5 = 0; } while(0)
 
 /**
    @Param

@@ -64,6 +64,8 @@ int main(void)
     ADC_Initialize();
     
     Configure_Device_Id();
+    
+    EUSART_Initialize();
 
     // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
     // Use the following macros to:
